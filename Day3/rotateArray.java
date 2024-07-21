@@ -1,7 +1,9 @@
 public class rotateArray {
     public static void main(String[] args) {
-        int[] arr = {3, 4, 5, 1, 2};
-        int target = 5;
+        int[] arr = {12 ,13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        int target =12;
+        int pivote = findPivote(arr);
+        System.out.println("Pivote: " + arr[pivote]);
         System.out.println("Index: " + rotateSearch(arr, target));
     }
     public static int rotateSearch(int[] arr, int target) {
@@ -9,8 +11,8 @@ public class rotateArray {
         if(pivotIndex== -1) {
             return BinarySearch(arr, target, 0, arr.length-1);
         }
-        if(target>arr[0]){
-            return BinarySearch(arr, target, 0, pivotIndex);
+        if(target>=arr[0]){
+            return BinarySearch(arr, target, 0, pivotIndex-1);
         }
         return BinarySearch(arr, target, pivotIndex+1, arr.length-1);
     }    
