@@ -6,10 +6,6 @@ public class Bits2 {
         System.out.println(setAndUnset4(13, 2));
         System.out.println(toggleBit(13, 1));
         System.out.println(removeRightmostBit(13));
-        boolean a=false,b=false;
-        if(a&&b){
-            System.out.println("Both true");
-        }
     }
     public static boolean setAndUnset1(int num,int i){
         if((num & (1 << i))!=0){
@@ -34,5 +30,8 @@ public class Bits2 {
     }
     public static int removeRightmostBit(int num){
         return num & (num - 1);
+    }
+    public static boolean bothTrue(boolean a, boolean b){
+        return a&&b;
     }
 }
